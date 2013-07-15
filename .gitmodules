@@ -1,3 +1,33 @@
 [submodule "site-lisp/eproject"]
 	path = site-lisp/eproject
 	url = https://github.com/jrockway/eproject
+[submodule "site-lisp/auto-complete"]
+	path = site-lisp/auto-complete
+	url = https://github.com/auto-complete/auto-complete.git
+[submodule "site-lisp/autopair"]
+	path = site-lisp/autopair
+	url = https://github.com/capitaomorte/autopair.git
+[submodule "emacs-dirtree"]
+	path = emacs-dirtree
+	url = https://github.com/zkim/emacs-dirtree.git
+[submodule "site-lisp/emacs-dirtree"]
+	path = site-lisp/emacs-dirtree
+	url = https://github.com/zkim/emacs-dirtree.git
+[submodule "nodejs-mode"]
+	path = nodejs-mode
+	url = git://github.com/emacsmirror/nodejs-mode.git
+[submodule "site-lisp/nodejs-mode"]
+	path = site-lisp/nodejs-mode
+	url = git://github.com/emacsmirror/nodejs-mode.git
+[submodule "site-lisp/js2-refactor"]
+	path = site-lisp/js2-refactor
+	url = https://github.com/magnars/js2-refactor.el.git
+[submodule "site-lisp/popup"]
+	path = site-lisp/popup
+	url = https://github.com/auto-complete/popup-el.git
+[submodule "site-lisp/yasnippet"]
+	path = site-lisp/yasnippet
+	url = https://github.com/capitaomorte/yasnippet
+[submodule "snippets/java-mode"]
+	path = snippets/java-mode
+	url = https://github.com/nekop/yasnippet-java-mode.git
