@@ -2,7 +2,7 @@
 ;; --------------------------------------------------------------------------
 ;; Desktop File for Emacs
 ;; --------------------------------------------------------------------------
-;; Created Sat Jun 29 17:55:50 2013
+;; Created Fri Jul 12 18:04:16 2013
 ;; Desktop file format version 206
 ;; Emacs version 24.3.50.1
 
@@ -10,108 +10,53 @@
 (setq desktop-missing-file-warning nil)
 (setq tags-file-name nil)
 (setq tags-table-list nil)
-(setq search-ring '("invokeC" "disp" "station" "rpcI" "rpcInvoke" "info.gameRecord" "client.js:[]" "	if(room.bout){\n	    next(null, {\n		code: statusCode.HOUSE.REMOVE_ROOM_FAILED_GAMING\n	    });\n	}\n" "isGaming" "newline" "autopair-newline" "new" "all" "playerC" "options." "roomClass"))
+(setq search-ring '("‘Ðí‘ÀÏ‘Óë" "OnGUI" "invokeC" "disp" "station" "rpcI" "rpcInvoke" "info.gameRecord" "client.js:[]" "	if(room.bout){\n	    next(null, {\n		code: statusCode.HOUSE.REMOVE_ROOM_FAILED_GAMING\n	    });\n	}\n" "isGaming" "newline" "autopair-newline" "new" "all" "playerC"))
 (setq regexp-search-ring '("client.js:" "code"))
 (setq register-alist (list (desktop-list* 50 (let ((mk (make-marker))) (add-hook 'desktop-delay-hook `(lambda nil (set-marker ,mk ,nil (get-buffer ," *temp*")))) mk))))
-(setq file-name-history '("~/lab/pomelo/pokerserver/game-server/app/utils/sessionUtil.js" "~/lab/pomelo/pokerserver/game-server/node_modules/pomelo/lib/common/service/sessionService.js" "~/lab/pomelo/pokerserver/game-server/node_modules/pomelo/lib/application.js" "~/lab/pomelo/pokerserver/game-server/app/servers/connector/handler/entryHandler.js" "~/lab/pomelo/pokerserver/game-server/app/servers/connector/remote/sessionRemote.js" "~/lab/pomelo/pokerserver/game-server/app/servers/game/handler/gameHandler.js" "~/lab/pomelo/pokerserver/game-server/app/utils/routes.js" "~/lab/pomelo/pokerserver/game-server/config/servers.json" "~/lab/pomelo/pokerserver/game-server/app.js" "~/lab/pomelo/pokerserver/game-server/node_modules/pomelo/node_modules/pomelo-rpc/lib/util/proxy.js" "/scp:root@xian.ruanko.com:/root/ps/node_modules/pomelo/node_modules/pomelo-rpc/lib/rpc-client/mailboxes/ws-mailbox.js" "/scp:root@xian.ruanko.com:/root/ps/node_modules/pomelo/node_modules/pomelo-rpc/lib/rpc-client/client.js" "/scp:root@xian.ruanko.com:/root/ps/node_modules/pomelo/node_modules/pomelo-rpc/lib/rpc-client/mailstation.js" "/scp:root@xian.ruanko.com:/root/ps/app.js" "/root@xian.ruanko.com:~/ps/app.sj" "~/lab/pomelo/pokerserver/game-server/node_modules/pomelo/node_modules/pomelo-rpc/lib/rpc-client/mailstation.js" "~/lab/pomelo/pokerserver/game-server/node_modules/pomelo/node_modules/pomelo-rpc/lib/rpc-client/mailboxes/ws-mailbox.js" "~/lab/pomelo/pokerserver/game-server/node_modules/pomelo/node_modules/pomelo-rpc/lib/util/utils.js" "~/lab/pomelo/pokerserver/game-server/node_modules/pomelo/node_modules/pomelo-rpc/lib/rpc-client/mailstation.js" "~/lab/pomelo/pokerserver/game-server/node_modules/pomelo/node_modules/pomelo-rpc/lib/rpc-client/client.js" "~/lab/temp" "~/lab/pomelo/pokerserver/game-server/node_modules/pomelo/node_modules/" "~/lab/pomelo/pokerserver/game-server/node_modules/pomelo/node_modules/pomelo-rpc/lib/rpc-client/mailboxes/ws-mailbox.js" "~/lab/pomelo/pokerserver/game-server/node_modules/pomelo/node_modules/pomelo-rpc/lib/rpc-client/mailbox.js" "~/lab/pomelo/pokerserver/game-server/node_modules/pomelo/node_modules/pomelo-rpc/lib/rpc-client/" "~/lab/pomelo/pokerserver/game-server/node_modules/pomelo/node_modules/pomelo-rpc/lib/rpc-client/mailboxes/" "~/lab/pomelo/pokerserver/game-server/node_modules/pomelo/node_modules/pomelo-rpc/lib/rpc-client/" "~/lab/pomelo/pokerserver/game-server/node_modules/pomelo/node_modules/pomelo-rpc/lib/rpc-client/mailstation.js" "~/lab/pomelo/pokerserver/game-server/node_modules/pomelo/node_modules/pomelo-rpc/lib/" "~/lab/pomelo/pokerserver/game-server/node_modules/pomelo/node_modules/pomelo-rpc/lib/util/proxy.js"))
+(setq file-name-history '("~/lab/node/ex/views/index.jade" "~/lab/node/ex/routes/index.js" "~/lab/node/ex/routes/" "~/lab/node/ex/app.js" "~/lab/pomelo/pomelo-admin-web/" "~/lab/pomelo/pokerserver/web-server/public/js/client.js" "~/lab/pomelo/pokerserver/game-server/node_modules/pomelo/" "~/lab/pomelo/chatofpomelo/game-server/config/servers.json" "~/Documents/‘·²‘ÈË‘ÐÞ‘ÏÉ‘´«.txt" "~/Documents/" "~/.emacs.d/init.el" "~/Documents/‘·²‘ÈË‘ÐÞ‘ÏÉ‘´«.txt" "~/lab/pomelo/pokerserver/game-server/app.js" "~/lab/pomelo/pokerserver/game-server/node_modules/pomelo/" "~/lab/pomelo/pokerserver/game-server/node_modules/pomelo" "~/lab/node/hello.js" "~/lab/pomelo/pokerserver/game-server/api.json" "~/lab/c/libpomelo/" "~/lab/pomelo/pokerserver/game-server/app/models/house.js" "~/lab/pomelo/pokerserver/game-server/app/servers/connector/remote/sessionRemote.js" "~/lab/pomelo/pokerserver/game-server/app/servers/connector/" "~/lab/pomelo/pokerserver/game-server/app.js" "~/lab/pomelo/pokerserver/game-server/package.json" "~/lab/pomelo/pokerserver/game-server/app/servers/connector/handler/entryHandler.js" "~/lab/pomelo/pokerserver/game-server/app.js" "~/.emacs.d/init.el" "~/lab/pomelo/pokerserver/game-server/app/models/house.js" "~/lab/pomelo/pokerserver/game-server/app/utils/sessionUtil.js" "~/lab/pomelo/pokerserver/game-server/node_modules/pomelo/lib/common/service/sessionService.js" "~/lab/pomelo/pokerserver/game-server/node_modules/pomelo/lib/application.js"))
 
 ;; Buffer section -- buffers listed in same order as in buffer list:
 (desktop-create-buffer 206
-  "/Users/dianausdu/lab/pomelo/pokerserver/game-server/app/servers/connector/handler/entryHandler.js"
-  "entryHandler.js"
+  "/Users/dianausdu/lab/node/ex/app.js"
+  "app.js"
   'js2-mode
   '(linum-mode auto-complete-mode autopair-mode yas-minor-mode)
-  8186
-  '(8192 nil)
-  nil
-  nil
-  '((buffer-file-coding-system . utf-8-unix)))
-
-(desktop-create-buffer 206
-  "/Users/dianausdu/lab/pomelo/pokerserver/game-server/app/servers/connector/remote/sessionRemote.js"
-  "sessionRemote.js"
-  'js2-mode
-  '(linum-mode auto-complete-mode autopair-mode yas-minor-mode)
-  201
-  '(225 nil)
-  nil
-  nil
-  '((buffer-file-coding-system . utf-8-unix)))
-
-(desktop-create-buffer 206
-  "/Users/dianausdu/lab/pomelo/pokerserver/game-server/app/utils/sessionUtil.js"
-  "sessionUtil.js"
-  'js2-mode
-  '(linum-mode auto-complete-mode autopair-mode yas-minor-mode)
-  371
-  '(371 nil)
-  nil
-  nil
-  '((buffer-file-coding-system . utf-8-unix)))
-
-(desktop-create-buffer 206
-  "/Users/dianausdu/lab/pomelo/pokerserver/game-server/app/utils/routes.js"
-  "routes.js"
-  'js2-mode
-  '(linum-mode auto-complete-mode autopair-mode yas-minor-mode)
-  420
-  '(382 nil)
-  nil
-  nil
-  '((buffer-file-coding-system . utf-8-unix)))
-
-(desktop-create-buffer 206
-  "/Users/dianausdu/lab/pomelo/pokerserver/game-server/node_modules/pomelo/lib/common/service/sessionService.js"
-  "sessionService.js"
-  'js2-mode
-  '(linum-mode auto-complete-mode autopair-mode yas-minor-mode)
-  1916
-  '(1 nil)
+  33
+  '(33 nil)
   nil
   nil
   '((buffer-file-coding-system . undecided-unix)))
 
 (desktop-create-buffer 206
-  "/Users/dianausdu/lab/pomelo/pokerserver/game-server/app.js"
-  "app.js<2>"
-  'js2-mode
-  '(linum-mode auto-complete-mode autopair-mode yas-minor-mode)
-  781
-  '(781 nil)
-  nil
-  nil
-  '((buffer-file-coding-system . utf-8-unix)))
-
-(desktop-create-buffer 206
-  "/Users/dianausdu/lab/pomelo/pokerserver/game-server/node_modules/pomelo/lib/application.js"
-  "application.js"
-  'js2-mode
-  '(linum-mode auto-complete-mode autopair-mode yas-minor-mode)
-  11846
+  "/Users/dianausdu/lab/node/ex/views/index.jade"
+  "index.jade"
+  'fundamental-mode
+  '(linum-mode autopair-mode yas-minor-mode)
+  1
   '(nil nil)
   nil
   nil
   '((buffer-file-coding-system . undecided-unix)))
 
 (desktop-create-buffer 206
-  "/Users/dianausdu/lab/pomelo/pokerserver/game-server/app/servers/game/handler/gameHandler.js"
-  "gameHandler.js"
+  "/Users/dianausdu/lab/node/ex/routes/index.js"
+  "index.js"
   'js2-mode
   '(linum-mode auto-complete-mode autopair-mode yas-minor-mode)
-  897
-  '(897 nil)
-  nil
-  nil
-  '((buffer-file-coding-system . utf-8-unix)))
-
-(desktop-create-buffer 206
-  "/Users/dianausdu/lab/pomelo/pokerserver/game-server/config/servers.json"
-  "servers.json"
-  'js-mode
-  '(linum-mode auto-complete-mode autopair-mode yas-minor-mode)
-  1367
-  '(1367 nil)
+  1
+  '(nil nil)
   nil
   nil
   '((buffer-file-coding-system . undecided-unix)))
+
+(desktop-create-buffer 206
+  "/Users/dianausdu/lab/pomelo/pomelo-admin-web/app.js"
+  "app.js<2>"
+  'js2-mode
+  '(linum-mode auto-complete-mode autopair-mode yas-minor-mode eproject-mode)
+  1
+  '(nil nil)
+  nil
+  nil
+  '((buffer-file-coding-system . undecided-dos)))
 

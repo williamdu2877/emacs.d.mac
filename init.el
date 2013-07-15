@@ -21,7 +21,7 @@
 (add-to-list 'load-path (expand-file-name "~/.emacs.d/site-lisp/auto-complete"))
 
 (add-to-list 'load-path (expand-file-name "~/.emacs.d/site-lisp/emacs-dirtree"))
-(add-to-list 'load-path (expand-file-name "~/.emacs.d/site-lisp/eproject"))
+;;(add-to-list 'load-path (expand-file-name "~/.emacs.d/site-lisp/eproject"))
 
 (add-to-list 'load-path (expand-file-name "~/.emacs.d/site-lisp/autopair"))
 (add-to-list 'load-path (expand-file-name "~/.emacs.d/site-lisp/yasnippet"))
@@ -40,6 +40,7 @@
 (setq make-backup-files nil);;disable auto backup
 
 (require 'utils)
+(require 'unicad)
 
 ;;set shell PATH
 (defun set-exec-path-from-shell-PATH ()
