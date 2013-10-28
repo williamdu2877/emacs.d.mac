@@ -141,7 +141,8 @@ This is particularly useful under Mac OSX, where GUI apps are not started from a
 ;;nodejs-mode, need to debug
 (require 'nodejs-repl)
 
-;;(require 'csharp-mode)
+(load-file (expand-file-name "~/.emacs.d/site-lisp/csharp-mode-0.8.5.el"))
+(require 'csharp-mode)
 
 ;;common lisp
 (require 'slime)
