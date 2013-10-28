@@ -4,6 +4,10 @@
 (setq mac-option-modifier 'meta)
 (setq mac-command-modifier 'ctrl)
 
+(require 'package)
+(add-to-list 'package-archives
+             '("melpa" . "http://melpa.milkbox.net/packages/") t)
+(package-initialize)
 ;;-------------------------------------------------------------------
 ;; configuration about boot
 ;;-------------------------------------------------------------------
@@ -21,15 +25,15 @@
 (add-to-list 'load-path (expand-file-name "~/.emacs.d/site-lisp/auto-complete"))
 
 (add-to-list 'load-path (expand-file-name "~/.emacs.d/site-lisp/emacs-dirtree"))
-;;(add-to-list 'load-path (expand-file-name "~/.emacs.d/site-lisp/eproject"))
+(add-to-list 'load-path (expand-file-name "~/.emacs.d/site-lisp/eproject"))
 
 (add-to-list 'load-path (expand-file-name "~/.emacs.d/site-lisp/autopair"))
 (add-to-list 'load-path (expand-file-name "~/.emacs.d/site-lisp/yasnippet"))
 (add-to-list 'load-path (expand-file-name "~/.emacs.d/site-lisp/js2-mode"))
 (add-to-list 'load-path (expand-file-name "~/.emacs.d/site-lisp/js2-refactor"))
-(add-to-list 'load-path (expand-file-name "~/.emacs.d/site-lisp/js2-refactor/lib/dash.el"))
-(add-to-list 'load-path (expand-file-name "~/.emacs.d/site-lisp/js2-refactor/lib/s.el"))
-(add-to-list 'load-path (expand-file-name "~/.emacs.d/site-lisp/js2-refactor/lib/multiple-cursors.el"))
+(add-to-list 'load-path (expand-file-name "~/.emacs.d/site-lisp/dash"))
+(add-to-list 'load-path (expand-file-name "~/.emacs.d/site-lisp/s"))
+(add-to-list 'load-path (expand-file-name "~/.emacs.d/site-lisp/multiple-cursors"))
 
 (add-to-list 'load-path (expand-file-name "~/.emacs.d/site-lisp/nodejs-mode"))
 
@@ -137,6 +141,8 @@ This is particularly useful under Mac OSX, where GUI apps are not started from a
 ;;nodejs-mode, need to debug
 (require 'nodejs-repl)
 
+;;(require 'csharp-mode)
+
 ;;common lisp
 (require 'slime)
 (setq inferior-lisp-program "/usr/local/Cellar/clisp/2.49/bin/clisp")
@@ -144,6 +150,8 @@ This is particularly useful under Mac OSX, where GUI apps are not started from a
 ;;-------------------------------------------------------------------
 ;; configuration about edit
 ;;-------------------------------------------------------------------
+;;(global-set-key (kbd "RET") 'newline-and-indent)
+
 ;;format whole buffer
 (defun indent-whole ()
   (interactive)
