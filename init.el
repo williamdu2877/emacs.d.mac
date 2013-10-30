@@ -85,6 +85,10 @@ This is particularly useful under Mac OSX, where GUI apps are not started from a
 (global-set-key [M-up] 'windmove-up)
 (global-set-key [M-down] 'windmove-down)
 
+;; bind key for beginning or end of buffer
+(global-set-key [67108924] 'beginning-of-buffer) ;;C-<
+(global-set-key [67108926] 'end-of-buffer) ;;C->
+
 ;; scroll speed
 (setq scroll-margin 3
       scroll-conservatively 10000)
