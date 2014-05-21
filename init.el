@@ -39,6 +39,8 @@
 
 (add-to-list 'load-path (expand-file-name "~/.emacs.d/site-lisp/slime"))
 
+(add-to-list 'load-path (expand-file-name "~/.emacs.d/site-lisp/cedet"))
+
 (desktop-save-mode 1);; save edit status last time
 (setq ring-bell-function 'ignore);; close error tip sound
 (setq make-backup-files nil);;disable auto backup
@@ -145,6 +147,7 @@ This is particularly useful under Mac OSX, where GUI apps are not started from a
 ;;nodejs-mode, need to debug
 (require 'nodejs-repl)
 
+;;c#
 (load-file (expand-file-name "~/.emacs.d/site-lisp/csharp-mode-0.8.5.el"))
 (require 'csharp-mode)
 
@@ -152,6 +155,27 @@ This is particularly useful under Mac OSX, where GUI apps are not started from a
 (require 'slime)
 (setq inferior-lisp-program "/usr/local/Cellar/clisp/2.49/bin/clisp")
 (slime-setup '(slime-fancy))
+
+;;cedet ide plugin 4 c/c++
+(load-file (expand-file-name "~/.emacs.d/site-lisp/cedet/cedet-devel-load.el"))
+(require 'cedet)
+(semantic-load-enable-minimum-features)
+(semantic-load-enable-code-helpers)
+;;(semantic-load-enable-guady-code-helpers)
+(semantic-load-enable-excessive-code-helpers)
+(semantic-load-enable-semantic-debugging-helpers)
+
+(defconst cedet-user-include-dirs
+  (list ".." "../include" "../inc" "../common" "../public"
+        "../.." "../../include" "../../inc" "../../common" "../../public"))
+(require 'semantic-c nil 'noerror)
+(let ((include-dirs cedet-user-include-dirs))
+  (when (eq system-type 'windows-nt)
+    (setq include-dirs (append include-dirs cedet-win32-include-dirs)))
+  (mapc (lambda (dir)
+          (semantic-add-system-include dir 'c++-mode)
+          (semantic-add-system-include dir 'c-mode))
+        include-dirs))
 ;;-------------------------------------------------------------------
 ;; configuration about edit
 ;;-------------------------------------------------------------------
