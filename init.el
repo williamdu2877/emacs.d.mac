@@ -8,6 +8,9 @@
 (add-to-list 'package-archives
              '("melpa" . "http://melpa.milkbox.net/packages/") t)
 (package-initialize)
+
+(add-to-list 'load-path (expand-file-name "~/.emacs.d/el-get/el-get"))
+
 ;;-------------------------------------------------------------------
 ;; configuration about boot
 ;;-------------------------------------------------------------------
@@ -40,6 +43,18 @@
 (add-to-list 'load-path (expand-file-name "~/.emacs.d/site-lisp/slime"))
 
 (add-to-list 'load-path (expand-file-name "~/.emacs.d/site-lisp/cedet"))
+
+
+(add-to-list 'load-path (expand-file-name "~/.emacs.d/el-get/el-get"))
+(require 'el-get)
+
+(add-to-list 'load-path (expand-file-name "~/.emacs.d/site-lisp/buffer-move"))
+(require 'buffer-move)
+(global-set-key (kbd "<C-S-up>")     'buf-move-up)
+(global-set-key (kbd "<C-S-down>")   'buf-move-down)
+(global-set-key (kbd "<C-S-left>")   'buf-move-left)
+(global-set-key (kbd "<C-S-right>")  'buf-move-right)
+
 
 (desktop-save-mode 1);; save edit status last time
 (setq ring-bell-function 'ignore);; close error tip sound
@@ -321,3 +336,6 @@ This is particularly useful under Mac OSX, where GUI apps are not started from a
   (dolist (charset '(kana han symbol cjk-misc bopomofo))
     (set-fontset-font (frame-parameter nil 'font) charset
                       (font-spec :family (car (cdr fonts))))))
+
+
+;;use C-x C-v RET to update buffer from disk
