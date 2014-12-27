@@ -339,3 +339,32 @@ This is particularly useful under Mac OSX, where GUI apps are not started from a
 
 
 ;;use C-x C-v RET to update buffer from disk
+
+
+
+(defun window-half-height ()
+  (max 1 (/ (1- (window-height (selected-window))) 2)))
+
+
+(defun scroll-up-half ()
+  (interactive)
+  (scroll-up (window-half-height)))
+
+(defun scroll-down-half ()         
+  (interactive)                    
+  (scroll-down (window-half-height)))
+
+(global-set-key (kbd "M-S-v") 'scroll-up-half)
+(global-set-key (kbd "C-S-v") 'scroll-down-half)
+
+
+(defun my-horizontal-recenter ()
+  "make the point horizontally centered in the window"
+  (interactive)
+  (let ((mid (/ (window-width) 2))
+        (line-len (save-excursion (end-of-line) (current-column)))
+        (cur (current-column)))
+    (if (< mid cur)
+        (set-window-hscroll (selected-window)
+                            (- cur mid)))))
+(global-set-key (kbd "C-S-l") 'my-horizontal-recenter)
