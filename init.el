@@ -163,8 +163,8 @@ This is particularly useful under Mac OSX, where GUI apps are not started from a
 (require 'nodejs-repl)
 
 ;;c#
-(load-file (expand-file-name "~/.emacs.d/site-lisp/csharp-mode-0.8.5.el"))
-(require 'csharp-mode)
+;;(load-file (expand-file-name "~/.emacs.d/site-lisp/csharp-mode-0.8.5.el"))
+;;(require 'csharp-mode)
 
 ;;common lisp
 (require 'slime)
@@ -339,7 +339,11 @@ This is particularly useful under Mac OSX, where GUI apps are not started from a
 
 
 ;;use C-x C-v RET to update buffer from disk
-
+;;auto revert buffers
+(autoload 'auto-revert-mode "autorevert" nil t)
+(autoload 'turn-on-auto-revert-mode "autorevert" nil nil)
+(autoload 'global-auto-revert-mode "autorevert" nil t)
+(global-auto-revert-mode 1)
 
 
 (defun window-half-height ()
