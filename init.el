@@ -1,4 +1,4 @@
-1;;-------------------------------------------------------------------
+;;-------------------------------------------------------------------
 ;; keyboard for emacs running in OS X
 ;;-------------------------------------------------------------------
 (setq mac-option-modifier 'meta)
@@ -339,11 +339,7 @@ This is particularly useful under Mac OSX, where GUI apps are not started from a
 
 
 ;;use C-x C-v RET to update buffer from disk
-;;auto revert buffers
-(autoload 'auto-revert-mode "autorevert" nil t)
-(autoload 'turn-on-auto-revert-mode "autorevert" nil nil)
-(autoload 'global-auto-revert-mode "autorevert" nil t)
-(global-auto-revert-mode 1)
+
 
 
 (defun window-half-height ()
@@ -358,8 +354,10 @@ This is particularly useful under Mac OSX, where GUI apps are not started from a
   (interactive)                    
   (scroll-down (window-half-height)))
 
-(global-set-key (kbd "M-S-v") 'scroll-up-half)
-(global-set-key (kbd "C-S-v") 'scroll-down-half)
+(global-set-key (kbd "C-S-v") 'scroll-up-command)
+(global-set-key (kbd "M-S-v") 'scroll-down-command)
+(global-set-key (kbd "C-v") 'scroll-up-half)
+(global-set-key (kbd "M-v") 'scroll-down-half)
 
 
 (defun my-horizontal-recenter ()
@@ -372,3 +370,22 @@ This is particularly useful under Mac OSX, where GUI apps are not started from a
         (set-window-hscroll (selected-window)
                             (- cur mid)))))
 (global-set-key (kbd "C-S-l") 'my-horizontal-recenter)
+
+;;use C-x C-v RET to update buffer from disk
+;;auto revert buffers
+(autoload 'auto-revert-mode "autorevert" nil t)
+(autoload 'turn-on-auto-revert-mode "autorevert" nil nil)
+(autoload 'global-auto-revert-mode "autorevert" nil t)
+(global-auto-revert-mode 1)
+
+
+(require 'tramp)
+(cond
+ ((eq system-type 'windows-nt)
+  (setq tramp-default-method "plink"
+        tramp-password-end-of-line "\r\n"))
+ ((eq system-type 'gnu/linux)
+  (setq tramp-default-method "ssh")))
+(setq tramp-default-user "root"
+	 tramp-default-host "114.215.87.216")
+(setq password-cache-expiry 360000)
